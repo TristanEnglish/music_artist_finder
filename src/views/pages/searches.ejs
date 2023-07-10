@@ -1,0 +1,24 @@
+<%- include('../partials/header'); -%>
+  <body>
+    <main>
+      <%
+      if (items) {
+        var table = '';
+        %>
+        <table class="table table-bordered">
+        <tr>
+          <th>Artist</th>
+          <th>Image</th>
+          <th>Genre</th>
+          <th>From:</th>
+          <th>Biography</th>
+        </tr>
+        <%
+        items.forEach(function(data){
+          table += '<tr> <td>' + data.artist_name + '</td> <td>' + data.artist_img + '</td> <td>' + data.artist_genre + '</td> <td>' + data.artist_country + '</td> <td>' + data.artist_biography + '</td> </tr>';
+        }); %>
+      <%- table %>
+      </table>
+      <% } %>
+    </main>
+<%- include('../partials/footer'); -%>

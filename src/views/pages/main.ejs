@@ -1,0 +1,37 @@
+<%- include('../partials/header'); -%>
+  <body>
+<main>
+      <div class="container-fluid" style="padding: 2%">
+        <form class="">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-5">
+              <input
+                class="form-control"
+                type="text"
+                name="title"
+                id="artist"
+                placeholder="Enter Artist Name"
+              />
+            </div>
+            <div class="col-1">
+              <input
+                class="btn btn-dark"
+                type="button"
+                value="Submit"
+                name="Submit"
+                onclick="getArtist()"
+              />
+            </div>
+          </div>
+        </form>
+        <br></br>
+        <div class="mx-auto" id="artist_card"style="width: 700px;">
+        </div>
+        <div class="mx-auto" id="success"style="width: 700px;">
+          <% if (message) { %>
+            <%- message %>
+            <% } %>
+        </div>
+</main>
+<%- include('../partials/footer'); -%>
